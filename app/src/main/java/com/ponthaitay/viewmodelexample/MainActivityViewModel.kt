@@ -12,7 +12,7 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
-class MainActivityViewModel() : ViewModel() {
+class MainActivityViewModel : ViewModel() {
     private var liveDataUserInfo: MutableLiveData<UserInfoDao>? = null
 
     fun getUserInfo(username: String): LiveData<UserInfoDao> {
