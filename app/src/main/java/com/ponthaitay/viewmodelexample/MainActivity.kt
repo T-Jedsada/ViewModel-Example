@@ -7,7 +7,6 @@ import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.view.View.GONE
 import com.ponthaitay.viewmodelexample.databinding.ActivityMainBinding
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : LifecycleActivity() {
 
@@ -19,7 +18,7 @@ class MainActivity : LifecycleActivity() {
                 .get(MainActivityViewModel::class.java)
                 .getUserInfo("t-jedsada")
                 .observe(this, Observer {
-                    pb.visibility = GONE
+                    binding.pb.visibility = GONE
                     binding.userInfo = it
                 })
     }
