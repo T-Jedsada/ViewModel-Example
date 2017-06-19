@@ -1,6 +1,5 @@
 package com.ponthaitay.viewmodelexample
 
-import android.arch.lifecycle.LifecycleActivity
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
@@ -8,7 +7,7 @@ import android.os.Bundle
 import android.view.View.GONE
 import com.ponthaitay.viewmodelexample.databinding.ActivityMainBinding
 
-class MainActivity : LifecycleActivity() {
+class MainActivity : LifecycleAppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -22,10 +22,13 @@ class MainActivityViewModel : ViewModel() {
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe({
-                        if (it.isSuccessful) liveDataUserInfo?.value = it?.body()
-                        else liveDataUserInfo?.value?.name = it?.message()!!
+                        if (it.isSuccessful) {
+                            liveDataUserInfo?.value = it?.body()
+                        } else {
+                            // TODO : somethings ERROR
+                        }
                     }, {
-                        liveDataUserInfo?.value?.name = it?.message!!
+                        // TODO : somethings FAILURE
                     })
         }
         return liveDataUserInfo as MutableLiveData<UserInfoDao>
