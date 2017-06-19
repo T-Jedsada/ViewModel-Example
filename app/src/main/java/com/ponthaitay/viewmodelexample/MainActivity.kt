@@ -17,7 +17,7 @@ class MainActivity : LifecycleActivity() {
 
         ViewModelProviders.of(this)
                 .get(MainActivityViewModel::class.java)
-                .getListMovie("t-jedsada")
+                .getUserInfo("t-jedsada")
                 .observe(this, Observer {
                     pb.visibility = GONE
                     binding.userInfo = it

@@ -15,7 +15,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class MainActivityViewModel() : ViewModel() {
     private var liveDataUserInfo: MutableLiveData<UserInfoDao>? = null
 
-    fun getListMovie(username: String): LiveData<UserInfoDao> {
+    fun getUserInfo(username: String): LiveData<UserInfoDao> {
         if (liveDataUserInfo == null) {
             liveDataUserInfo = MutableLiveData()
             providesUserInfoAPIs().getUserInfoGitHub(username)
