@@ -1,6 +1,7 @@
 package com.ponthaitay.viewmodelexample.service
 
 import com.google.gson.annotations.SerializedName
+import java.util.*
 
 data class UserInfoDao(@SerializedName("login") var login: String,
                        @SerializedName("id") var id: Long,
@@ -16,5 +17,5 @@ data class UserInfoDao(@SerializedName("login") var login: String,
                        @SerializedName("bio") var bio: String,
                        @SerializedName("followers") var followers: Int,
                        @SerializedName("following") var following: Int,
-                       @SerializedName("created_at") var createdAt: java.util.Date,
-                       @SerializedName("updated_at") var updatedAt: java.util.Date)
+                       @SerializedName("created_at") var createdAt: Date,
+                       @SerializedName("updated_at") var updatedAt: Date)
